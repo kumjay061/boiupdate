@@ -1,0 +1,188 @@
+body {
+  background-color: #f3f3f3;
+  font-family: Lato-Regular, sans-serif;
+  margin: auto;
+  padding: 0;
+  max-width: 800px;
+}
+a {
+  color: #97144d;
+  text-decoration: none;
+}
+.card-login {
+  text-align: center;
+  border-radius: 20px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5),
+    0 2px 4px 0 rgba(0, 0, 0, 0.26);
+}
+.card-login > button {
+  background-color: transparent;
+  margin: 0 !important;
+  font-size: 0.75rem !important;
+  border-radius: 20px;
+  padding: 6px 0;
+  border: none;
+  color: #4a4a4a;
+  font-weight: 700;
+  font-family: Lato-Bold;
+  min-width: 0;
+}
+.card-login #a {
+  width: 50%;
+}
+.card-login #b {
+  width: 30%;
+}
+.card-login #c {
+  width: 20%;
+}
+.card-login > .active {
+  background-color: #97144d;
+  color: #fff;
+}
+h1 {
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+  display: block;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+.header {
+  background-color: #007dc6;
+  text-align: left;
+  padding: 15px;
+  position: relative;
+}
+.header-text {
+  font-family: Lato-Italic, sans-serif !important;
+}
+.img-logo {
+  width: 50px;
+  height: 10px;
+  margin-bottom: -2px;
+}
+.card {
+  background-color: #fff;
+  margin: 10px;
+  display: block;
+}
+.mg {
+  color: #506d85;
+  letter-spacing: normal;
+  line-height: 1.5;
+  font-size: 10px;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+.mainContent {
+  padding: 10px;
+}
+.para {
+  height: 39px;
+  padding-top: 16px;
+}
+.pmLogin {
+  margin-top: 1.75rem;
+}
+.para span {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #222;
+}
+.para span,
+.text-center {
+  text-align: center;
+}
+.LoginForm {
+  margin: 15px;
+  padding: 15px;
+}
+.form-group {
+  margin-bottom: 25px;
+}
+.form-group label {
+  display: block;
+}
+.form-group label,
+.label {
+  color: #9b9b9b;
+  flex-basis: auto;
+  font-family: Lato-Regular;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 16px;
+}
+.radio {
+  accent-color: #97144d;
+}
+.form-group .new-control {
+  width: 98%;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  border-style: none;
+  border-bottom: 1px solid #adbdcc;
+  line-height: 19px;
+}
+.form-group .new-control:focus {
+  border-style: none;
+  outline: none;
+  border-bottom: 1px solid #adbdcc;
+}
+.submit {
+  background-color: #007dc6;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  font-size: 14px;
+  margin: 10px 0;
+}
+p {
+  margin-bottom: 0;
+  padding: 10px;
+}
+.circlespinner {
+  animation: rotate 2s linear infinite;
+  width: 50px;
+  height: 50px;
+  stroke: #fff;
+}
+.path {
+  stroke: #97144d;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  to {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+.l-loading {
+  margin-top: 80px;
+}
+.form-group .invalid-message {
+  font-size: 12px;
+  color: red;
+}

